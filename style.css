@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.repositories {
+    width: 661px;
+    margin: 20px auto;
+    background-color: #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    width: 500px;
+    padding-top: 60px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.repositories__input {
+    width: inherit;
+    height: 61px;
+    background: #FFFFFF;
+    font-size: 48px;
+    line-height: 56px;
+    border: none;
+    padding-left: 10px;
+}
+
+.listFoundRepositories {
+    font-size: 30px;
+    line-height: 35px;
+    width: inherit;
+    transition: height 0.3s;
+    height: 0;
+    overflow: hidden;
+}
+
+
+
+.listFoundRepositories__item {
+    background: #E3E3E3;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    padding: 0 10px;
+}
+
+.listFoundRepositories__item:hover {
+    background: #45584f;
+}
+
+.repositories__listSavedRepositories {
+    margin-top: 45px;
+}
+
+.listSavedRepositories {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.listSavedRepositories__item {
+    border: 1px solid #000000;
+    min-height: 101px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    background-color: #45584f;
+    color: #afafaf;
+}
+
+.repositories__button {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.repositories__button:hover {
+    transform: scale(1.1);
+}
+
+.repositories__button::after,
+.repositories__button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 22px;
+    width: 3px;
+    height: 50px;
+    background-color: #000000;
+    transform: rotate(45deg);
+}
+
+.repositories__button::before {
+    transform: rotate(-45deg);
+}
