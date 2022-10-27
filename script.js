@@ -3,7 +3,7 @@ class SearchRepositories {
     constructor() {
         this.nameRepository = document.querySelector('.repositories__input')
         this.foundRepositories = document.querySelector('.listFoundRepositories')
-        this.SavedRepositories = document.querySelector('.listSavedRepositories')
+        this.SavedRepositories = document.querySelector('.repositories__listSavedRepositories')
 
         this.repositoriesData = []
         this.repositoriesDataId = []
@@ -30,7 +30,6 @@ class SearchRepositories {
         if (!requestGit.ok) return
         this.clearfoundRepositories()
         const rep = await requestGit.json()
-        console.log(rep.items)
         if (!rep.items.length) this.foundRepositories.style.height = '0px'
         rep.items.forEach(repositories => {
             this.repositoriesData.push({
@@ -59,7 +58,7 @@ class SearchRepositories {
             return true
         }
         this.repositoriesDataId.push(addElemnt.id)
-        const item = this.createElement('li', 'listSavedRepositories__item');
+        const item = this.createElement('div', 'savedRepositories');
         item.innerHTML = `<div class="repositories__infoRepositories">
                                 <div class="infoRepositories">Name: ${addElemnt.name}</div>
                                 <div class="infoRepositories">Owner: ${addElemnt.owner}</div>

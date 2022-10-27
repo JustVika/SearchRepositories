@@ -65,14 +65,12 @@ ul {
 
 .repositories__listSavedRepositories {
     margin-top: 45px;
-}
-
-.listSavedRepositories {
     font-size: 24px;
     line-height: 28px;
 }
 
-.listSavedRepositories__item {
+
+.savedRepositories {
     border: 1px solid #000000;
     min-height: 101px;
     display: flex;
