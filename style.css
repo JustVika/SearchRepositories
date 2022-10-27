@@ -39,21 +39,27 @@ ul {
     line-height: 35px;
     width: inherit;
     transition: height 0.3s;
-    height: 0;
+    height: 100px;
     overflow: hidden;
 }
 
 
-
-.listFoundRepositories__item {
-    background: #E3E3E3;
-    border: 2px solid #000000;
+.listFoundRepositories__btn {
+    display: block;
+    font-size: inherit;
+    line-height: 35px;
+    text-align: start;
     cursor: pointer;
-    transition: background-color 0.5s;
+    background: #E3E3E3;
+    border: none;
+    border: 2px solid #000000;
+    width: 100%;
+    height: 100%;
     padding: 0 10px;
+    transition: background-color 0.5s;
 }
 
-.listFoundRepositories__item:hover {
+.listFoundRepositories__btn:hover {
     background: #45584f;
 }
 
